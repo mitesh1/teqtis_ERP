@@ -1,0 +1,32 @@
+<div class="basic-container">
+  <header>
+    <div class="app-header">
+      <mat-toolbar-row>
+         
+        <span>
+            <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> 
+          <h2>ERP Grid</h2>
+        </span>
+        <div>
+          <nav class="main-nav">
+            <span>
+              <a routerLink="/addProduct">Add Product</a>
+            </span>
+            <a routerLink="/erpGrid">ERP Grid</a>
+          </nav>
+        </div>
+      </mat-toolbar-row>
+    </div>
+  </header>
+
+  <div>
+    <mat-drawer-container>
+      <mat-drawer-content></mat-drawer-content>
+    </mat-drawer-container>
+    <!-- <app-erp-grid class="ERPgrid"></app-erp-grid> -->
+    <router-outlet></router-outlet>
+    <!-- <app-add-product></app-add-product> -->
+
+  </div>
+
+</div>

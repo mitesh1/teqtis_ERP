@@ -1,0 +1,33 @@
+<div id="add-prdct-container">
+
+  <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="cmn-input-field">
+        <input matInput placeholder="Generic Name"  formControlName="generic_name">
+        <mat-error *ngIf="addProductEA.generic_name.invalid">please dont leave the field blank</mat-error>
+      </mat-form-field>
+      
+
+      <mat-form-field class="cmn-input-field">
+          <input matInput placeholder="Brand" formControlName="brand" >
+        </mat-form-field>
+
+        <mat-form-field class="cmn-input-field">
+            <input matInput placeholder="Type" formControlName="typed" >
+          </mat-form-field>
+
+          <mat-form-field class="cmn-input-field">
+              <input matInput placeholder="SKU size" formControlName="skusize">
+            </mat-form-field>
+
+            <mat-form-field class="cmn-input-field">
+                <input matInput placeholder="Vendor Name"  formControlName="vendor_name">
+              </mat-form-field>
+
+                <mat-form-field class="cmn-input-field">
+                    <input matInput placeholder="Minimum Quantity" formControlName="minimum_qty" >
+                  </mat-form-field>
+
+                  <button type="submit" class="submitBtn" mat-button >Save</button>
+                </form>
+
+</div>
